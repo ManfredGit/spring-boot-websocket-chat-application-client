@@ -9,7 +9,7 @@ import $ from 'jquery';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Spring WebSocket Chat';
+  title = 'Spring Boot WebSocket Chat App';
   private serverUrl = 'http://localhost:8080/socket';
   private stompClient;
 
