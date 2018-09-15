@@ -10,7 +10,6 @@ import $ from 'jquery';
 })
 export class AppComponent {
   title = 'Spring Boot WebSocket Chat App';
-  private serverUrl = 'http://localhost:8080/socket';
   private stompClient;
 
   constructor() {
@@ -18,7 +17,7 @@ export class AppComponent {
   }
 
   connect() {
-    let ws = new SockJS(this.serverUrl);
+    let ws = new SockJS('/socket');
     this.stompClient = Stomp.over(ws);
     let that = this;
     this.stompClient.connect({}, function () {
